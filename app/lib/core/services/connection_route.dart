@@ -6,7 +6,6 @@ import 'package:flutter_bluetooth_serial/flutter_bluetooth_serial.dart';
 import 'bluetooth_entry_button.dart';
 
 enum _DeviceAvailability {
-  no,
   maybe,
   yes,
 }
