@@ -16,7 +16,7 @@ class SplashScreen extends StatelessWidget {
             duration: 4000,
             imageSize: 350,
             imageSrc: "assets/logo.png",
-            text: 'Smart Hemodialysis',
+            text: 'Pateint Care System',
             textType: TextType.TyperAnimatedText,
             textStyle: const TextStyle(
               fontSize: 30.0,

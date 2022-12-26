@@ -1,6 +1,7 @@
 import 'dart:typed_data';
 import 'package:app/models/readings.dart';
 import 'package:app/core/services/service.dart';
+import 'package:app/ui/screens/heart_rate.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bluetooth_serial/flutter_bluetooth_serial.dart';
 
@@ -152,13 +153,13 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Smart Hemodialysis"),
+        title: const Text("Patient Care System"),
         backgroundColor: Colors.grey[900],
         leading: Padding(
           padding: const EdgeInsets.only(
             left: 15,
           ),
-          child: Image.asset('assets/akwa.png'),
+          child: Image.asset('assets/logo.png'),
         ),
         actions: [
           Padding(
@@ -179,7 +180,10 @@ class _HomeState extends State<Home> {
           )
         ],
       ),
-      body: Container(color: Colors.grey[200], child: const SizedBox()),
+      body: Container(
+        color: Colors.grey[200],
+        child: const HeartRateScreen(),
+      ),
     );
   }
 }
