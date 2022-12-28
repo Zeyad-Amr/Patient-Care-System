@@ -93,7 +93,7 @@ class _HomeState extends State<Home> {
       setState(() {});
     }).catchError((error) {
       debugPrint('Cannot connect, exception occured');
-      debugPrint(error);
+      debugPrint(error.toString());
     });
   }
 
@@ -181,8 +181,25 @@ class _HomeState extends State<Home> {
         ],
       ),
       body: Container(
-        color: Colors.grey[200],
-        child: const HeartRateScreen(),
+        width: double.infinity,
+        height: MediaQuery.of(context).size.height - AppBar().preferredSize.height - MediaQuery.of(context).padding.top,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color.fromARGB(255, 65, 170, 255),
+              Colors.blue,
+              Color.fromARGB(255, 222, 37, 255),
+              // Color.fromARGB(255, 255, 25, 101),
+            ],
+          ),
+        ),
+        child: Column(
+          children: const [
+            HeartRateScreen(),
+          ],
+        ),
       ),
     );
   }

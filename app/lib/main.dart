@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Smart Hemodialysis',
+        title: 'Patient Care System',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
