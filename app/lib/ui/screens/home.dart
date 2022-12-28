@@ -196,8 +196,105 @@ class _HomeState extends State<Home> {
           ),
         ),
         child: Column(
-          children: const [
-            HeartRateScreen(),
+          children: [
+            const HeartRateScreen(),
+            const Padding(
+              padding: EdgeInsets.all(20.0),
+              child: Divider(
+                color: Colors.white,
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 20.0),
+              child: Text('Syringe Pump', style: TextStyle(fontSize: 25, color: Colors.white)),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[900],
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            foregroundColor: Colors.grey[900],
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                          ),
+                          onPressed: (() {}),
+                          child: const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Text("Start", style: TextStyle(fontSize: 20, color: Colors.green)),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            foregroundColor: Colors.grey[900],
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                          ),
+                          onPressed: (() {}),
+                          child: const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Text("Stop", style: TextStyle(fontSize: 20, color: Colors.red)),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            foregroundColor: Colors.grey[900],
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                          ),
+                          onPressed: (() {}),
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text("Reset", style: TextStyle(fontSize: 20, color: Colors.grey[900])),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+                child: Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15),
+                    border: Border.all(
+                      color: Colors.grey[900]!,
+                      width: 3,
+                    ),
+                  ),
+                  child: Center(
+                    child: Text(
+                      'Status',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.grey[900],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),

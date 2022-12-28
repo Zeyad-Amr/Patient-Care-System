@@ -38,7 +38,6 @@ class _HeartRateScreenState extends State<HeartRateScreen> {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: MediaQuery.of(context).size.height * 0.5,
       child: Column(
         children: [
           !enableHBPM
@@ -102,6 +101,7 @@ class _HeartRateScreenState extends State<HeartRateScreen> {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: enableHBPM ? Colors.red : Colors.white,
                         foregroundColor: enableHBPM ? Colors.white : Colors.black,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                       ),
                       onPressed: (() {
                         setState(() {
@@ -118,7 +118,7 @@ class _HeartRateScreenState extends State<HeartRateScreen> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Container(
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: Colors.white),
+              decoration: BoxDecoration(borderRadius: BorderRadius.circular(15), color: Colors.white),
               constraints: const BoxConstraints.expand(height: 180),
               child: BPMChart(bpmValues),
             ),
